@@ -1,16 +1,10 @@
-function makeTransaction(quantity, pricePerDroid) {
-  return `You ordered ${quantity} droids worth ${
-    quantity * pricePerDroid
-  } credits!`;
-}
 let quantity = 5;
 let pricePerDroid = 3000;
-/* const totalPrice = quantity * pricePerDroid; */
-console.log(
-  `You ordered ${quantity} droids worth ${quantity * pricePerDroid} credits!`
-);
 
-/* console.log(`You ordered ${quantity} droids worth ${totalPrice} credits!`); */
+function makeTransaction(quantity, pricePerDroid) {
+  const totalPrice = quantity * pricePerDroid;
+  return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+}
 
 makeTransaction(5, 3000); // Result 15000 ;
 makeTransaction(3, 1000); // Result 3000 ;
